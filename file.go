@@ -5,8 +5,11 @@ import (
 	"os"
 )
 
+// Alias for backward compatibility
+var File = FileToSlice
+
 // Read a file and return all the lines.
-func File(path string) ([]string, error) {
+func FileToSlice(path string) ([]string, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
