@@ -8,12 +8,12 @@ A little module of functions I find helpful for Go.
 
 A collection of functions I use frequently when writing a server in Go.
 
-_GetServerPort() string_  
+**GetServerPort() string**  
 Read the PORT environment variable and return it or return 8080 if it's not set.
 
 ### lil/file
 
 A collection of functions I use frequently when working with files in Go.
 
-_FileToSlice(path string) ([]string, error)_  
+**FileToSlice(path string) ([]string, error)**  
 Read a file and return all the lines as a slice of strings.
