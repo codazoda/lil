@@ -1,4 +1,4 @@
-package lil
+package file
 
 import (
 	"bufio"

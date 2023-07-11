@@ -1,4 +1,4 @@
-package lil
+package server
 
 import "os"
 
