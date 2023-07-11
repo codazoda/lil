@@ -20,10 +20,7 @@ import (
 )
 ```
 
-Now you can call the packages below with a command like the following.
-
-```
-```
+Now you can call the packages and functions below.
 
 ## Packages
 
