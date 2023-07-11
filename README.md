@@ -8,7 +8,7 @@ Examples:
 // Return the value stored in the DATABASE env or default to localhost
 env.GetEnv("DATABASE", "localhost") 
 
-// Read /tmp/example.txt and return a slice
+// Read /tmp/example.txt and return a slice containing each line
 mySlice := file.FileToSlice("/temp/example.txt")
 
 // Return the PORT environment variable or default to 8080
