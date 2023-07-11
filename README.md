@@ -28,7 +28,7 @@ Now you can call the packages and functions below.
 
 Functions for working with environment variables.
 
-**GetEnv(key string, fallback string) ()**
+**GetEnv(key string, fallback string) ()**  
 Return the value stored in the envionment variable named `key` or fall back to the string specified in `fallback` if the environment variable is not set. Ex: `env.GetEnv("PORT", "8080")`.
 
 ### file
