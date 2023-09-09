@@ -1,6 +1,8 @@
 package file
 
 import (
+	"os"
+	"path/filepath"
 	"testing"
 
 	"golang.org/x/exp/slices"
@@ -66,6 +68,26 @@ func TestFile(t *testing.T) {
 	got = slices.Contains(repos, want)
 	if got != true {
 		t.Fatalf(`%v: want true for %v got %v`, name, want, got)
+	}
+
+}
+
+func TestGetConfigDir(t *testing.T) {
+	name := "GetConfigDir()"
+
+	// Read the config directory
+	dir, err := GetConfigDir("test")
+	if err != nil {
+		t.Fatalf(`%v: unable to set config dir (%v): %v`, name, dir, err)
+	}
+
+	// Verify that we got the expected home directory
+	// TODO: Unset the XDG_CONFIG_PATH env
+	userDir, _ := os.UserHomeDir()
+	wantDir := filepath.Join(userDir, ".config", "test")
+	gotDir := dir
+	if gotDir != wantDir {
+		t.Fatalf(`%v: want string of %v got %v`, name, wantDir, gotDir)
 	}
 
 }

@@ -11,6 +11,9 @@ env.GetEnv("DATABASE", "localhost")
 // Read /tmp/example.txt and return a slice containing each line
 mySlice := file.FileToSlice("/temp/example.txt")
 
+// Return the XDG config directory (typically ~/.config/app_name)
+configDir := file.GetConfigDir("my_app")
+
 // Return the PORT environment variable or default to 8080
 port := server.GetServerPort()
 ```
@@ -50,6 +53,9 @@ A collection of functions I use frequently when working with files in Go.
 
 **FileToSlice(path string) ([]string, error)**  
 Read a file and return all the lines as a slice of strings.
+
+**GetConfigDir(app string) (string, error)**  
+Return the XDG standard config directory for this application.
 
 ### server
 
